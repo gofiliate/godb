@@ -12,4 +12,5 @@ type ConnectionDetails struct {
 	DbwHost string `json:"DbwHost"`
 	DbwPort string `json:"DbwPort"`
 	DbwName string `json:"DbwName"`
+	SslMode string `json:"SslMode"`
 }

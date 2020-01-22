@@ -11,7 +11,7 @@ func TestLoadConfig(t *testing.T) {
 	want := reflect.TypeOf(blankStruct)
 
 	if got, _ := LoadConfig(); reflect.TypeOf(got) != want {
-		t.Errorf("Hello() = %q, want %q", got, want)
+		t.Errorf("LoadConfig() = %q, want %q", got, want)
 	}
 
 }

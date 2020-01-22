@@ -1,0 +1,13 @@
+{
+  "DbrUser" : "",
+  "DbrPass" : " ",
+  "DbrHost" : "",
+  "DbrPort" : "",
+  "DbrName" : "",
+  "DbwUser" : "",
+  "DbwPass" : " ",
+  "DbwHost" : "",
+  "DbwPort" : "",
+  "DbwName" : "",
+  "SslMode" : "" //Possible values REQUIRED | DISABLED | VERIFY_CA | VERIFY_IDENTITY
+}

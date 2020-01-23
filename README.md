@@ -7,7 +7,7 @@ To add to your project
 # sudo go get github.com/gofiliate/godb
 ```
 
-##Configuration
+## Configuration
 Connection details for the database should be placed in a file called config.json. Simply copy the config.dist.json file to config.json
 
 ```json

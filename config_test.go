@@ -1,17 +1,15 @@
 package godb
 
 import (
-	"reflect"
 	"testing"
+	"fmt"
+
 )
 
-func TestLoadConfig(t *testing.T) {
+func TestReadLoadConfigExternal(t *testing.T) {
 
-	var blankStruct ConnectionDetails
-	want := reflect.TypeOf(blankStruct)
+	LoadConfigExternal("read", "goapi", "password", "127.0.0.1", "3306", "goapi")
 
-	if got, _ := LoadConfig(); reflect.TypeOf(got) != want {
-		t.Errorf("LoadConfig() = %q, want %q", got, want)
-	}
+	fmt.Printf("username: %v password: %v host: %v port %v database: %v\n", readUser, readPass, readHost, readPort, readDB)
 
 }

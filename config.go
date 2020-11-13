@@ -1,24 +1,20 @@
 package godb
 
-import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-)
+func LoadConfigExternal(mode string, username string , password string, host string, port string, database string) {
 
-func LoadConfig() (config ConnectionDetails, err error) {
-
-	data, err := ioutil.ReadFile("config.json")
-
-	if err != nil {
-		fmt.Println("Cannot load config.json file. Make sure the file is in the root of the module and is valid json.")
+	if mode == "read" {
+		 readUser = username
+		 readPass = password
+		 readHost =  host
+		 readPort = port
+		 readDB = database
 	}
 
-	err = json.Unmarshal(data, &config)
-
-	if err != nil {
-		fmt.Println("Error unmarshalling json :", err)
+	if mode == "write" {
+		writeUser = username
+		writePass = password
+		writeHost =  host
+		writePort = port
+		writeDB = database
 	}
-
-	return
 }

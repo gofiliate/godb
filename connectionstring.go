@@ -4,17 +4,17 @@ import (
 	"fmt"
 )
 
-func GetMysqlReadConnectionString(config ConnectionDetails) (connectionString string) {
+func GetMysqlReadConnectionString() (connectionString string) {
 
-	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", config.DbrUser, config.DbrPass, config.DbrHost, config.DbrPort, config.DbrName)
+	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", readUser, readPass, readHost, readPort, readDB)
 
 	return
 
 }
 
-func GetMysqlWriteConnectionString(config ConnectionDetails) (connectionString string) {
+func GetMysqlWriteConnectionString() (connectionString string) {
 
-	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", config.DbwUser, config.DbwPass, config.DbwHost, config.DbwPort, config.DbwName)
+	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", writeUser, writePass, writeHost, writePort, writeDB)
 
 	return
 }

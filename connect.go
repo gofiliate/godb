@@ -11,8 +11,8 @@ var DBW *sql.DB
 
 func ConnectMysqlRead()(err error) {
 
-	config, err := LoadConfig()
-	readConnStr := GetMysqlReadConnectionString(config)
+
+	readConnStr := GetMysqlReadConnectionString()
 
 	DBR, err = sql.Open("mysql", readConnStr)
 
@@ -29,8 +29,8 @@ func ConnectMysqlRead()(err error) {
 
 func ConnectMysqlWrite()(err error) {
 
-	config, err := LoadConfig()
-	writeConnStr := GetMysqlWriteConnectionString(config)
+
+	writeConnStr := GetMysqlWriteConnectionString()
 
 	DBW, err = sql.Open("mysql", writeConnStr)
 

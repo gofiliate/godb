@@ -13,7 +13,7 @@ func ConnectMysqlRead()(err error) {
 
 
 	readConnStr := GetMysqlReadConnectionString()
-
+	fmt.Printf("ReadConnStr: %v\n", readConnStr)
 	DBR, err = sql.Open("mysql", readConnStr)
 
 	if err != nil {
@@ -31,7 +31,7 @@ func ConnectMysqlWrite()(err error) {
 
 
 	writeConnStr := GetMysqlWriteConnectionString()
-
+	fmt.Printf("WriteConnStr: %v\n", writeConnStr)
 	DBW, err = sql.Open("mysql", writeConnStr)
 
 	if err != nil {

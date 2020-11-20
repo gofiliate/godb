@@ -1,6 +1,6 @@
 package godb
 
-func LoadConfigExternal(mode string, username string , password string, host string, port string, database string) {
+func LoadConfigExternal(mode string, username string , password string, host string, port int, database string) {
 
 	if mode == "read" {
 		 readUser = username

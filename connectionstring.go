@@ -6,7 +6,7 @@ import (
 
 func GetMysqlReadConnectionString() (connectionString string) {
 
-	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", readUser, readPass, readHost, readPort, readDB)
+	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%v)/%s", readUser, readPass, readHost, readPort, readDB)
 
 	return
 
@@ -14,7 +14,7 @@ func GetMysqlReadConnectionString() (connectionString string) {
 
 func GetMysqlWriteConnectionString() (connectionString string) {
 
-	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", writeUser, writePass, writeHost, writePort, writeDB)
+	connectionString = fmt.Sprintf("%s:%s@tcp(%s:%v)/%s", writeUser, writePass, writeHost, writePort, writeDB)
 
 	return
 }

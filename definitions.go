@@ -1,4 +1,4 @@
-package godb
+package github.com/gofiliate/godb
 
 /*
  define out variables , split them by read / write capabilities

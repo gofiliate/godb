@@ -1,4 +1,4 @@
-package godb
+package github.com/gofiliate/godb
 
 type ConnectionDetails struct {
 
